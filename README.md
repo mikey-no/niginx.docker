@@ -22,7 +22,7 @@ This batch script does:
 ```
 firefox.exe localhost:<port number>
 ```
-* pauses (oportnity to Ctrl-C) to end the batch file (if you want it to continue to run)
+* pauses, providing an oportnity to Ctrl-C, to end the batch file if you want the container to continue to run
 * does a clean up stomming and removing the container
 
 ## port number
@@ -41,6 +41,7 @@ A random port number is asigned from range by docker. This maps the port 80 from
 
 * Does not use my nginx.conf file (commented out)
 * Not ready for production (no loggings, ssh access via another container etc)
+* Lots of configuration commented out
 
 # Copyright
 

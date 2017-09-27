@@ -32,4 +32,3 @@ docker stop %conrun%
 docker rm %conrun%
 docker rmi -f %image%
 
-
