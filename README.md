@@ -25,6 +25,12 @@ firefox.exe localhost:<port number>
 * pauses (oportnity to Ctrl-C) to end the batch file (if you want it to continue to run)
 * does a clean up stomming and removing the container
 
+## port number
+This may be found in the output from the docker ps command:
+0.0.0.0:**32778**->80/tcp   mynginx3
+
+A random port number is asigned from range by docker. This maps the port 80 from inside the container to this external one.
+
 # Background
 
 * Wanted to learn how to do this

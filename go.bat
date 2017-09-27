@@ -1,8 +1,8 @@
 @echo off
 echo Docker nginx build, run and clean up script
+echo Author: mikey-no
 echo 27 Sep 2017
 echo works from Powershell
-rem docker run --name mynginx1my -P -d nginx
 
 set image=mynginximage
 set tag=lastest
@@ -22,7 +22,8 @@ docker run --name %conrun% -P -d %image%
 echo Show the running containers...
 docker ps
 
-rem docker exec -it [container-id] bash
+echo To open a terminal inside the container...
+echo run this command: docker exec -it [container-id] bash
 
 echo Cleanup....
 pause
@@ -30,3 +31,5 @@ pause
 docker stop %conrun%
 docker rm %conrun%
 docker rmi -f %image%
+
+
