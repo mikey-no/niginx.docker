@@ -1,11 +1,22 @@
+@echo off
+echo Docker nginx build, run and clean up script
+echo 27 Sep 2017
+echo works from Powershell
 rem docker run --name mynginx1my -P -d nginx
 
-docker build -t mynginximage1 .
+set image=mynginximage
+set tag=lastest
+set conrun=mynginx3xx
 
-docker run --name mynginx3 -P -d mynginximage1
+docker build -t %image% .
+
+docker run --name %conrun% -P -d %image%
+docker ps
+
+rem docker exec -it [container-id] bash
 
 echo "Cleanup"
 pause
 
-docker stop mynginx3
-docker rmi -f mynginximage1
+docker stop %conrun%
+docker rmi -f %image%
