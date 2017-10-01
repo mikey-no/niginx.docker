@@ -23,11 +23,13 @@ This batch script does:
 firefox.exe localhost:<port number>
 ```
 * pauses, providing an oportnity to Ctrl-C, to end the batch file if you want the container to continue to run
-* does a clean up stomming and removing the container
+* does a clean up - stopping and removing the container
 
 ## port number
 This may be found in the output from the docker ps command:
 0.0.0.0:**32778**->80/tcp   mynginx3
+
+In this case 32778.
 
 A random port number is asigned from range by docker. This maps the port 80 from inside the container to this external one.
 
@@ -42,6 +44,15 @@ A random port number is asigned from range by docker. This maps the port 80 from
 * Does not use my nginx.conf file (commented out)
 * Not ready for production (no loggings, ssh access via another container etc)
 * Lots of configuration commented out
+
+## Versioning
+
+When this becomes relavent...
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
+#Reference
+
+[Deploying nginx with docker] (https://www.nginx.com/blog/deploying-nginx-nginx-plus-docker/)
 
 # Copyright
 

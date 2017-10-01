@@ -24,6 +24,7 @@ docker ps
 
 echo To open a terminal inside the container...
 echo run this command: docker exec -it [container-id] bash
+echo run this command: docker exec -it $(docker ps -a--filter name=%conrun%) bash
 
 echo Cleanup....
 pause
