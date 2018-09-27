@@ -6,7 +6,7 @@ echo works from Powershell
 
 set image=mynginximage
 set tag=lastest
-set conrun=mynginx3
+set conrun=mynginx
 
 echo Start by cleaning up...
 docker rmi -f %image%
